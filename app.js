@@ -16,7 +16,8 @@ app.set('view engine', 'ejs');
 
 const dbURI = 'mongodb+srv://rethvik:rethvik45@nodejs.xupzf.mongodb.net/lms';
 mongoose.connect(dbURI)
-  
+  .then((result) => app.listen(3000))
+  .catch((err) => console.log(err));
 
 app.get('*', checkUser);
 app.get('/', (req, res) =>{
