@@ -1,0 +1,557 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter UI", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+}
+header {
+  width: 100%;
+  padding: 2em 8em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1 {
+  font-size: 3rem;
+  color: #0d2129;
+  font-weight: bold;
+  letter-spacing: -0.03em;
+}
+.logo-link {
+  text-decoration: none;
+}
+.header-button {
+  background-color: #0d2129;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: -0.03em;
+  padding: 0.5em 0.8em;
+  border-radius: 0.2em;
+  transition: all 0.2s linear;
+}
+.header-button:hover {
+  background-color: #1b4f62;
+}
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.main {
+  text-align: center;
+  margin-top: 3em;
+  padding-top: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100vh;
+}
+.main h2 {
+  color: #212529;
+  font-size: 3.5rem;
+}
+.main .heading p {
+  font-size: 1.2rem;
+  margin-top: 1em;
+  color: #495057;
+  font-weight: 400;
+}
+.animation {
+  background-color: #0d2129;
+  width: 70%;
+  text-align: left;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  border-radius: 0.5em;
+}
+.animation p {
+  color: #f8f9fa;
+  font-size: 1.2rem;
+  letter-spacing: 0.1em;
+  margin-left: 0.5em;
+}
+
+.main-process {
+  width: 100%;
+  margin-top: 2em;
+}
+.process {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.block-1 {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.block-2 {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.process article {
+  padding: 1em 2em;
+  display: grid;
+  grid-template-columns: 10% 80%;
+  column-gap: 10px;
+}
+
+.process article img {
+  min-width: 40px;
+  width: 50%;
+}
+.process-info {
+  text-align: left;
+}
+.process-info h3 {
+  color: #212529;
+  font-size: 1.75rem;
+  font-weight: 400;
+}
+.process-info p {
+  color: #495057;
+  font-size: 1.2rem;
+  margin-top: 0.75em;
+}
+footer {
+  margin-top: 1em;
+  text-align: center;
+  color: #495057;
+  font-size: 0.8rem;
+}
+/* Login and Register Page */
+.container {
+  height: 101vh;
+  border-radius: 15px;
+  /* max-width:1024px; */
+  margin: 5px auto;
+  width: 980px;
+  box-shadow: 0px 0px 50px #a5b4cc;
+}
+.login-form {
+  height: 98vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.login-form form {
+  display: grid;
+  grid-template-columns: 100%;
+  row-gap: 10px;
+}
+.login-form input {
+  width: 100%;
+  margin: 0 auto;
+  border: 1px solid #728188;
+  border-radius: 5px;
+  padding: 0.5em 0;
+  outline: none;
+  background-color: #e8f0fe;
+}
+.login-form label {
+  text-align: center;
+  color: #3a3a3a;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+.login-form button {
+  width: 100px;
+  margin: 0 auto;
+  padding: 0.5em 0.2em;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  background-color: #0d2129;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+
+.login-form h1 {
+  font-size: 3rem;
+  letter-spacing: -0.03em;
+}
+/* Sign up page */
+.register-section {
+  height: 100vh;
+  background-color: #0d2129;
+  border-top-right-radius: 5px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.signup-form {
+  width: 540px;
+  border-radius: 15px;
+  max-width: 100%;
+  background-color: white;
+  height: 80vh;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#photo {
+  width: 100px;
+}
+
+.register-form {
+  height: 100vh;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.signup-form form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100vh;
+  align-items: center;
+  width: 50%;
+}
+.error {
+  color: #ff0099;
+  margin: 10px 2px;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+.signup-form label {
+  font-weight: bold;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+}
+.signup-form input {
+  margin: 0 auto;
+  border: 2px solid #728188;
+  border-radius: 5px;
+  padding: 0.5em 0;
+  outline: none;
+  background-color: #e8f0fe;
+}
+.signup-form button {
+  width: 100px;
+  margin: 0 auto;
+  padding: 0.5em 0.2em;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  background-color: black;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+button {
+  transition: all 0.2s ease;
+}
+.login-form button:hover {
+  background-color: #244d5f;
+}
+.register-form button:hover {
+  background-color: rgb(236, 213, 213);
+}
+/* Task Page */
+.tasks-header {
+  width: 100%;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  padding-left: 0;
+  padding-right: 0;
+}
+.tasks-header .logo-link {
+  margin-left: 0.5em;
+}
+.tasks-header div {
+  margin-right: 0.5em;
+}
+.task-container {
+  margin: 0 auto;
+  height: 70vh;
+  max-width: 1024px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.profile-button {
+  background-color: rgb(190, 190, 24);
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: -0.03em;
+  padding: 0.5em 0.8em;
+  border-radius: 0.2em;
+  transition: all 0.2s linear;
+}
+.task-container section {
+  height: 120px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #4ad66d;
+  padding: 0.5em;
+}
+.task-details {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.2em;
+}
+.form-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.task-info h1 {
+  margin-bottom: 0.2em;
+  margin-left: auto;
+}
+.task-info p {
+  margin-bottom: 0.2em;
+}
+.form-control a {
+  text-decoration: none;
+  margin-left: 0.2em;
+  color: white;
+  background-color: #4ad66d;
+  border-radius: 5px;
+  padding: 0.2em;
+  margin-top: 0.5em;
+  transition: all 0.2s ease-in-out;
+}
+.form-control a:hover {
+  background-color: #50c06c;
+}
+
+/* Course Page */
+.course-header {
+  width: 100%;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  padding-left: 0;
+  padding-right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+.course-header h1 {
+  font-size: 2.5rem;
+  margin-left: 0.2em;
+  color: #0d2129;
+  font-weight: bold;
+  letter-spacing: -0.03em;
+}
+.logo-link {
+  text-decoration: none;
+}
+.course-header .header-button {
+  background-color: #0d2129;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: normal;
+  text-decoration: none;
+  letter-spacing: -0.03em;
+  padding: 0.2em 0.3em;
+  border-radius: 0.2em;
+  transition: all 0.2s linear;
+}
+.header-button:hover {
+  background-color: #1b4f62;
+}
+.course-header div {
+  margin-right: 0.5em;
+}
+.course-header .profile-button {
+  background-color: rgb(190, 190, 24);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: normal;
+  text-decoration: none;
+  letter-spacing: -0.03em;
+  padding: 0.2em 0.3em;
+  border-radius: 0.2em;
+  transition: all 0.2s linear;
+}
+.profile-button:hover {
+  background-color: rgb(148, 148, 7);
+}
+.backtocourses {
+  text-decoration: none;
+  color: rebeccapurple;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.courses {
+  display: grid;
+  grid-template-columns: 30% 69%;
+  column-gap: 0.5%;
+  height: 83vh;
+  border-top: 5px solid black;
+}
+.courses aside {
+  height: 83vh;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border-right: 2px solid #4ad66d;
+  border-radius: 5px;
+}
+.courses aside h1 {
+  background-color: #00000014;
+  width: 100%;
+  text-align: center;
+  height: 7vh;
+}
+.courses-prg {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.courses aside div {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding-left: 0.3em;
+}
+.courses aside input {
+  margin-left: 0.2em;
+  margin-right: 0.4em;
+  border-radius: 100%;
+}
+.courses h3 {
+  cursor: pointer;
+}
+.courses section {
+  border-left: 2px solid #4ad66d;
+  border-radius: 5px;
+  box-shadow: 0px 0px 25px #4ad66d;
+}
+.video-container .headings {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #00000014;
+  align-items: center;
+}
+.video-container .headings h2 {
+  font-size: 2rem;
+  margin-left: 0.2em;
+}
+
+.video-container .headings label {
+  margin-right: 0.4em;
+  background-color: #4ad66d;
+  padding: 0.2em;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+}
+.video-container .headings label:hover {
+  background-color: #50c06c;
+}
+.video-container .iframe-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5em;
+}
+.video-fade {
+  display: none;
+}
+/* User Profile Page */
+
+.user-container {
+  background-color: skyblue;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.user-photo {
+  height: 25vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  border-radius: 20px;
+  background-color: white;
+}
+.user-photo .profile-img {
+  border: 1px solid black;
+  width: 110px;
+  height: 100px;
+  border-radius: 100%;
+}
+.user-info {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 20px;
+  align-items: center;
+  height: 45vh;
+}
+.user-info h2 {
+  margin-bottom: 0.4em;
+  font-size: 1.2rem;
+}
+.user-info form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.user-info form div {
+  display: flex;
+  text-align: left;
+  justify-content: space-between;
+}
+.user-info form input {
+  width: 500px;
+  border: 1px solid #728188;
+  border-radius: 5px;
+  padding: 0.5em 0;
+  outline: none;
+  background-color: #e8f0fe;
+}
+
+.login-form label {
+  text-align: center;
+  color: #3a3a3a;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+.user-info form button {
+  margin: 0 auto;
+  width: 100px;
+  padding: 0.5em 0.2em;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  background-color: #0d2129;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 0.2em;
+}

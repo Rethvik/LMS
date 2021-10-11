@@ -1,0 +1,103 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Stige | Course</title>
+</head>
+<body>
+    <header class="course-header">
+        <a class="logo-link" href="/">
+            <h1>stige</h1>
+        </a>
+        <div>
+        <a class="profile-button" href="/user">Profile</a>
+        <a class="header-button" href="/">Log Out</a>
+        
+        </div>
+    </header>
+    <a href="/task" class="backtocourses">Back to Courses</a>
+    <div class="courses">
+        <aside>
+            <h1>Course Lessons</h1>
+            <div class="courses-prg">
+            <div>
+                <input id="course1-lesson1" class="checkbox" type="checkbox" name="course1-lesson1">
+                <h3>Lesson1</h3>
+            </div>
+            <div>
+                <input id="course1-lesson2" class="checkbox" type="checkbox" name="course1-lesson2">
+                <h3>Lesson2</h3>
+            </div>
+            <div>
+                <input id="course1-lesson3" class="checkbox" type="checkbox" name="course1-lesson3">
+                <h3>Lesson3</h3>
+            </div>
+            </div>
+        </aside>
+        <section>
+            <div class="video-container">
+                <div class="headings">
+                    <h2>Lesson1-HTML</h2>
+                    <label for="course1-lesson1">Mark as complete</label>
+                </div>
+                <div class="iframe-container">
+                <iframe width="600" height="400" src="https://www.youtube.com/embed/pQN-pnXPaVg" title="YouTube video player"
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+                
+            </div>
+            <div class="video-container video-fade">
+                <div class="headings">
+                    <h2>Lesson2-CSS</h2>
+                    <label for="course1-lesson2">Mark as complete</label>
+                </div>
+                <div class="iframe-container">
+                    <iframe width="600" height="400" src="https://www.youtube.com/embed/1Rs2ND1ryYc" title="YouTube video player"
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+                
+            </div>
+            <div class="video-container video-fade">
+                <div class="headings">
+                    <h2>Lesson3-JavaScript</h2>
+                    <label for="course1-lesson3">Mark as complete</label>
+                </div>
+                <div class="iframe-container">
+                    <iframe width="600" height="400" src="https://www.youtube.com/embed/PkZNo7MFNFg" title="YouTube video player"
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+                
+            </div>
+        </section>
+    </div>
+</body>
+<script>
+    const h3=document.querySelectorAll("h3");
+    const videoContainer=document.querySelectorAll('.video-container');
+    for (let i=0; i<h3.length; i++){
+        h3[i].addEventListener("click",()=>{
+            videoContainer[i].classList.add('video-container');
+            videoContainer[i].classList.remove('video-fade');
+            if(i===0){
+                videoContainer[i+1].classList.add('video-fade');
+                videoContainer[i + 2].classList.add('video-fade');
+            }
+            else if(i===1){
+                videoContainer[i + 1].classList.add('video-fade');
+                videoContainer[i - 1].classList.add('video-fade');
+            }
+            else {
+                videoContainer[i - 2].classList.add('video-fade');
+                videoContainer[i - 1].classList.add('video-fade');
+            }
+
+        })
+    }
+</script>
+</html>

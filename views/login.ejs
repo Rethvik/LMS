@@ -1,0 +1,62 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Stige | Login</title>
+  </head>
+  <body>
+    <div class="container">
+      <section class="login-section">
+        <div class="login-form">
+          <div class="company">
+            <h1>stige</h1>
+          </div>
+          <h2>Login</h2>
+          <form>
+            <label for="email">Username or Email Address</label>
+            <input type="text" id="email" />
+            <div class="email error"></div>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" />
+            <div class="password error"></div>
+            <button class="login">Login</button>
+          </form>
+        </div>
+      </section>
+    </div>
+    <footer class="login-footer">Copyright © 2021 Stige</footer>
+    <script>
+      const form = document.querySelector("form");
+      const emailError = document.querySelector(".error");
+      const passwordError = document.querySelector(".error");
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        emailError.textContent = "";
+        passwordError.textContent = "";
+        const email = form.email.value;
+        const password = form.password.value;
+        try {
+          const res = await fetch("/login", {
+            method: "POST",
+            body: JSON.stringify({ email, password }),
+            headers: { "Content-Type": "application/json" },
+          });
+          const data = await res.json();
+          console.log(data);
+          if (data.errors) {
+            emailError.textContent = data.errors.email;
+            passwordError.textContent = data.errors.password;
+          }
+          if (data.user) {
+            location.assign("task");
+          }
+        } catch (err) {
+          console.log(err);
+        }
+      });
+    </script>
+  </body>
+</html>
