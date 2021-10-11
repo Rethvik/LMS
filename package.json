@@ -4,11 +4,9 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node app.js"
   },
-  "engines": {
-    "node": "16.9.1"
-  },
+  
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -19,5 +17,8 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.0.10",
     "validator": "^13.6.0"
+  },
+  "engines": {
+    "node": "16.9.1"
   }
 }
